@@ -1,6 +1,6 @@
 # document-summariser
 
-Document Summariser is an interactive tool that generates summaries from text using GPT.
+Document Summariser is a tool that generates interactive summaries from text using GPT.
 
 ![example](screenshot.png)
 
@@ -8,25 +8,33 @@ _Note: this app was put together as a proof of concept. As a result, some shortc
 
 ## Instructions
 
-There is a client and a server.
-
 ### Server
 
-The server is built with Python@^3.9, FastAPI, and some helper packages for things like typing/validation, reading from .env, and OpenAI interaction and NLP. It is built using [Poetry](https://python-poetry.org/), so make sure this is installed along with Python@^3.9.
+The server is built with Python@^3.9, FastAPI and some helper packages for things like typing/validation, reading from `.env`, OpenAI interaction and NLP. It is built using [Poetry](https://python-poetry.org/), so make sure this is installed along with a suitable python version. The following steps describe how to run the server.
 
-To run the server, first add your OpenAI API key to a `.env` file with `echo <your-api-key> > server/.env`. Then install dependencies using `poetry install`. Finally, run the server with `poetry run python main.py`.
+- Change into the server directory: `cd server`
+- Add your OpenAI API key to a `.env` file: `echo 'OPENAI_API_KEY="<your-api-key>"' > .env`
+- Install dependencies: `poetry install`
+- Run the server: `poetry run python main.py`
 
 ### Client
 
-The client is built with React + TypeScript, and was bootstrapped with `create-react-app`. To run it, install dependencies with `cd client && npm install`. Then run it with `npm start`. It'll run on `localhost:3000`, so navigate to this address in your browser.
+The client is built with React and TypeScript, and was bootstrapped with `create-react-app`. The following steps describe how to run the client.
+
+- Change into the client directory: `cd client`
+- Install dependencies: `npm install`
+- Run the client: `npm start`
+- Navigate to `localhost:3000` in your browser
 
 ## Built with
 
 - [React](https://react.dev/) - Client UI library
 - [TypeScript](https://www.typescriptlang.org/) - Typing for JavaScript
+- [npm](https://www.npmjs.com/) - JavaScript dependency management
 - [OpenAI](https://openai.com/) - Completion and embeddings API
-- [Poetry](https://python-poetry.org/) - Python dependency management
 - [FastAPI](https://fastapi.tiangolo.com/) - Server framework
+- [Poetry](https://python-poetry.org/) - Python dependency management
+- [NLTK](https://www.nltk.org/) - NLP library for tokenisation
 
 ## License
 
