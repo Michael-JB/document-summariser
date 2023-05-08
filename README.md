@@ -1,6 +1,6 @@
 # document-summariser
 
-Document Summariser is a tool that generates interactive summaries from text using GPT.
+Document Summariser is a tool that generates interactive summaries from text using GPT. Given an input document, the tool will first generate a summary using GPT. Then, when a user selects a sentence in the summary, the tool generates a relevance mapping between that sentence and the paragraphs in the document. It does this by computing the pairwise cosine similarity between the summary text embedding vector and each of the paragraph text embedding vectors. The tool also uses GPT to generate these text embeddings. This relevance mapping is rendered as a heatmap, with darker highlighting indicating higher relevance to the summary sentence.
 
 ![example](screenshot.png)
 
